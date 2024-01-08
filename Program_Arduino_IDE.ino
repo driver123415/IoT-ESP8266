@@ -26,15 +26,15 @@ String tempString, tempString1;
 float temp;
 float Fahrenheit = 0;
 
-char ssid[] = "CREW_SQUAD";          //username wifi yang akan digunakan untuk terhubung ke internet
-char password[] = "opopassword";     //password wifi yang digunakan
+char ssid[] = "Nama_Wifi";          //username wifi yang akan digunakan untuk terhubung ke internet
+char password[] = "Password_Wifi";     //password wifi yang digunakan
 
-#define BOTtoken "6919629877:AAHLSMQv4cJUXtxH35UVbqFiGACSkTNYf4s" //id bot token yang didapat setelah membuat bot pada telegram
+#define BOTtoken "0123456789:AAHLSMQv4cJUXtxH35UVbqFiGACSkTNYf4s" //id bot token yang didapat setelah membuat bot pada telegram
 WiFiClientSecure client;
 UniversalTelegramBot bot(BOTtoken, client);
 
 // Array untuk menyimpan ID Chat yang diizinkan
-String allowedChats[] = {"1762649368", "your_second_id", "your_third_id"}; //id telegram orang yang menggunakan telegram setelah mendapat dari user info bot
+String allowedChats[] = {"0123456789", "your_second_id", "your_third_id"}; //id telegram orang yang menggunakan telegram setelah mendapat dari user info bot
 
 unsigned long lastTemperatureSendTime = 0;
 const unsigned long temperatureSendInterval = 120000; // setiap 2 menit mengirim pesan suhu ke telegram
