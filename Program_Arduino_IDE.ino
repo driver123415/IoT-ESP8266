@@ -134,6 +134,12 @@ void setup() {
     Serial.print(".");
     delay(500);
   }
+  if(WiFi.status() == WL_CONNECTED){
+    Serial.println("");
+    Serial.println("ESP8266 sudah terkonesi dg Wifi!");  
+    Serial.println("IP address esp8266 : ");
+    Serial.println(WiFi.localIP());  
+    }
   
   //menginisialisasi layar OLED menggunakan perpustakaan Adafruit_SSD1306
   if (!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
@@ -155,6 +161,8 @@ void setup() {
   tempString.reserve(10);
 }
 
+
+
 void loop() {
   //membaca suhu dari sensor DS18B20, mengonversinya ke Celsius dan Fahrenheit, dan kemudian menampilkannya di Serial Monitor.
   DS18B20.requestTemperatures();
@@ -162,7 +170,6 @@ void loop() {
   Fahrenheit = DS18B20.toFahrenheit(temp);
   Serial.println(temp);
   Serial.println(Fahrenheit);
-
 
   // mengonversi nilai suhu (temp) menjadi string yang akan ditampilkan di layar OLED
   tempString = String(temp, 2);
