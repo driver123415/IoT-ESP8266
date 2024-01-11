@@ -28,8 +28,8 @@ String tempString, tempString1;
 float temp;
 float Fahrenheit = 0;
 
-char ssid[] = "CREW_SQUAD";          //username wifi yang akan digunakan untuk terhubung ke internet
-char password[] = "opopassword";     //password wifi yang digunakan
+char ssid[] = "ChangeThisToYourWifiUsername";          //Isikan username wifi yang akan digunakan untuk terhubung ke internet
+char password[] = "ChangeThisToYourWifiPassword";     //Isikan password wifi yang digunakan
 
 #define BOTtoken "6919629877:AAHLSMQv4cJUXtxH35UVbqFiGACSkTNYf4s"  //id bot token yang didapat setelah membuat bot pada telegram
 WiFiClientSecure client;
